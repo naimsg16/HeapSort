@@ -30,7 +30,7 @@ public class HeapSort {
             for(E elem : elements){
                 add(elem);
             }
-            for(int i = elements.length - 1; i > 0; i--){
+            for(int i = elements.length - 1; i >= 0; i--){
                 elements[i] = remove();
             }
         }
