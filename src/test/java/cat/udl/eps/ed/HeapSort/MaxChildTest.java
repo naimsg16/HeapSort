@@ -1,14 +1,16 @@
 package cat.udl.eps.ed.HeapSort;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static java.util.Comparator.naturalOrder;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class MaxChildTest {
 
     @Test
-    void MaxBetweenString() {
+    void maxChildString() {
         String[] elements = new String[5];
         var heap = new HeapSort.BinaryHeap<>(elements, naturalOrder());
 
@@ -22,7 +24,7 @@ public class MaxChildTest {
     }
 
     @Test
-    void MaxBetweenInteger() {
+    void maxChildInteger() {
         Integer[] elements = new Integer[5];
         var heap = new HeapSort.BinaryHeap<>(elements, naturalOrder());
 
@@ -31,16 +33,14 @@ public class MaxChildTest {
         heap.add(2);
         heap.add(3069);
         heap.add(12);
-
-
 
         assertEquals(1, heap.maxChild(0));
     }
 
-
-    /* BRO NAIM ES TORNA BOIG AMB LA MERDA AQUESTA DIU QUE EL MES GRAN DELS FILLS DEL 12 es 14 i NI ESTA XDDDD
-        @Test
-    void MaxBetweenEmpty() {
+    //TODO: Fes testos així per les excepcions
+    @Test
+    @DisplayName("maxChild() on non-existent node should throw OutOfBoundsException")
+    void test3() {
         Integer[] elements = new Integer[5];
         var heap = new HeapSort.BinaryHeap<>(elements, naturalOrder());
 
@@ -50,10 +50,10 @@ public class MaxChildTest {
         heap.add(3069);
         heap.add(12);
 
-
-        assertEquals(12, heap.maxChild(6));
+        assertThrows(IndexOutOfBoundsException.class, () -> {
+            heap.maxChild(6);
+        });
     }
-     */
 
 }
 
