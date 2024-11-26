@@ -11,14 +11,14 @@ import static org.junit.jupiter.api.Assertions.*;
 public class AddTest {
 
     @Test
-    void testAddSingleInteger() {
+    void AddSingleInteger() {
         Integer[] elements = new Integer[10];
         var heap = new HeapSort.BinaryHeap<>(elements, naturalOrder());
         heap.add(25);
         assertEquals(25, elements[0]);
     }
     @Test
-    void testAddMultipleInteger() {
+    void AddMultipleInteger() {
         Integer[] elements = new Integer[5];
         Integer[] expected = {3069,30,2,25,12}; // ja ordenats com apareixerian si s'afegixin al arbre
         var heap = new HeapSort.BinaryHeap<>(elements, naturalOrder());
@@ -31,7 +31,7 @@ public class AddTest {
     }
 
     @Test
-    void testAddSingleString() {
+    void AddSingleString() {
         String[] elements = new String[10];
         var heap = new HeapSort.BinaryHeap<>(elements, naturalOrder());
         heap.add("Mariachi");
@@ -39,7 +39,7 @@ public class AddTest {
     }
 
     @Test
-    void testAddMultipleString() {
+    void AddMultipleString() {
         String[] elements = new String[5];
         String[] expected = {"hola", "Marioneta", "Trompeta", "Aigua", "Mariachi"};
         var heap = new HeapSort.BinaryHeap<>(elements, naturalOrder());

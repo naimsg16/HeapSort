@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class RemoveTest {
 
     @Test
-    void testRemoveSingleInteger() {
+    void RemoveSingleInteger() {
         Integer[] elements = new Integer[1];
         var heap = new HeapSort.BinaryHeap<>(elements, naturalOrder());
 
@@ -19,7 +19,7 @@ public class RemoveTest {
     }
 
     @Test
-    void testRemoveMultipleInteger() {
+    void RemoveMultipleInteger() {
         Integer[] elements = new Integer[5];
         var heap = new HeapSort.BinaryHeap<>(elements, naturalOrder());
 
@@ -33,7 +33,7 @@ public class RemoveTest {
     }
 
     @Test
-    void testRemoveSingleString() {
+    void RemoveSingleString() {
         String[] elements = new String[1];
         var heap = new HeapSort.BinaryHeap<>(elements, naturalOrder());
 
@@ -43,7 +43,7 @@ public class RemoveTest {
     }
 
     @Test
-    void testRemoveMultipleString() {
+    void RemoveMultipleString() {
         String[] elements = new String[5];
         var heap = new HeapSort.BinaryHeap<>(elements, naturalOrder());
 
