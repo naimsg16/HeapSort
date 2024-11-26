@@ -1,4 +1,4 @@
-package cat.udl.eps.ed;
+package cat.udl.eps.ed.HeapSort;
 
 import java.util.Arrays;
 import java.util.Comparator;
