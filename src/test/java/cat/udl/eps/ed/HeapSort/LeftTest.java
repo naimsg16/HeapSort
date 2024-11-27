@@ -1,9 +1,11 @@
 package cat.udl.eps.ed.HeapSort;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static java.util.Comparator.naturalOrder;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class LeftTest {
 
