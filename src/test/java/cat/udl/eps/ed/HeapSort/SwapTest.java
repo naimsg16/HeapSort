@@ -41,7 +41,7 @@ public class SwapTest {
     }
     @Test
     @DisplayName("swap() on non-existent node should throw OutOfBoundsException")
-    void test3() {
+    void SwapOutOfBounds() {
         Integer[] elements = new Integer[5];
         var heap = new HeapSort.BinaryHeap<>(elements, naturalOrder());
 

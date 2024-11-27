@@ -34,13 +34,14 @@ public class MaxChildTest {
         heap.add(3069);
         heap.add(12);
 
-        assertEquals(1, heap.maxChild(0));
+        assertEquals(1, heap.maxChild(0)); // Right child is larger
+        assertEquals(3, heap.maxChild(1)); // Left child is larger
     }
 
     //TODO: Fes testos així per les excepcions
     @Test
     @DisplayName("maxChild() on non-existent node should throw OutOfBoundsException")
-    void test3() {
+    void MaxChildOutOfBounds() {
         Integer[] elements = new Integer[5];
         var heap = new HeapSort.BinaryHeap<>(elements, naturalOrder());
 
