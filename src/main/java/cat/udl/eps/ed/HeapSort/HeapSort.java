@@ -36,8 +36,6 @@ public class HeapSort {
         }
 
         void add (E elem){
-            if(heapSize >= elements.length) throw
-                    new UnsupportedOperationException("Can't add elements to a full heap");
             elements[heapSize] = elem;
             int elemIndex = heapSize;
             heapSize += 1;
@@ -51,8 +49,6 @@ public class HeapSort {
         }
 
         E remove () {
-            if(heapSize < 0) throw
-                    new UnsupportedOperationException("Can't remove elements from an empty heap");
             E elem = elements[0];
             elements[0] = elements[heapSize - 1];
             heapSize -= 1;
