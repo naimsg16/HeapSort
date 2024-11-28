@@ -32,10 +32,10 @@ public class MaxChildTest {
         heap.add(30);
         heap.add(2);
         heap.add(3069);
-        heap.add(12);
+        heap.add(26);
 
         assertEquals(1, heap.maxChild(0)); // Right child is larger
-        assertEquals(3, heap.maxChild(1)); // Left child is larger
+        assertEquals(4, heap.maxChild(1)); // Left child is larger
     }
 
     //TODO: Fes testos així per les excepcions
